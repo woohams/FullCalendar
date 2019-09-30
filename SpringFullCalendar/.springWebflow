@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webflow-project-description>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.9.10.201907102328-CI-B2290]]></pluginVersion>
+	<configs>
+		<config>
+			<file>src/main/webapp/WEB-INF/spring/appServlet/aop-context.xml</file>
+			<name><![CDATA[aop-context]]></name>
+		</config>
+	</configs>
+</webflow-project-description>

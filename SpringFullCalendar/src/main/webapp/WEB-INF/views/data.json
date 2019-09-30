@@ -1,0 +1,101 @@
+[{
+    "_id": 1,
+    "title": "거래처 미팅",
+    "description": "대충 설명이라는 내용",
+    "start": "2019-09-07T09:30",
+    "end": "2019-09-07T15:00",
+    "type": "카테고리1",
+    "backgroundColor": "#D25565",
+    "textColor": "#ffffff",
+    "allDay": false
+  }, {
+    "_id": 2,
+    "title": "치과예약",
+    "description": "신경치료 그지같다 아프다",
+    "start": "2019-09-01T12:30",
+    "end": "2019-09-03T15:30",
+    "type": "카테고리1",
+    "backgroundColor": "#9775fa",
+    "textColor": "#ffffff",
+    "allDay": false
+  }, {
+    "_id": 3,
+    "title": "철수 생일",
+    "description": "철수와 영희",
+    "start": "2019-09-12",
+    "end": "2019-09-13",
+    "type": "카테고리2",
+    "backgroundColor": "#ffa94d",
+    "textColor": "#ffffff",
+    "allDay": true
+  }, {
+    "_id": 4,
+    "title": "반응형 웹",
+    "description": "css 장인",
+    "start": "2019-08-06",
+    "end": "2019-08-06",
+    "type": "카테고리2",
+    "backgroundColor": "#74c0fc",
+    "textColor": "#ffffff",
+    "allDay": true
+  }, {
+    "_id": 5,
+    "title": "청약 입금",
+    "description": "돈내라 돈 !!",
+    "start": "2019-08-08",
+    "end": "2019-08-08",
+    "type": "카테고리3",
+    "backgroundColor": "#f06595",
+    "textColor": "#ffffff",
+    "allDay": true
+  }, {
+    "_id": 6,
+    "title": "카드값 납부",
+    "description": "돈내라 이말이야.",
+    "start": "2019-08-14",
+    "end": "2019-08-14",
+    "type": "카테고리2",
+    "backgroundColor": "#63e6be",
+    "textColor": "#ffffff",
+    "allDay": true
+  }, {
+    "_id": 7,
+    "title": "휴가",
+    "description": "떠나요 둘이서 ~ ♬",
+    "start": "2019-09-18",
+    "end": "2019-09-20",
+    "type": "카테고리4",
+    "backgroundColor": "#a9e34b",
+    "textColor": "#ffffff",
+    "allDay": true
+  },{
+    "_id": 8,
+    "title": "세차예약",
+    "description": "다음날 비옵니다 ㅎㅎ",
+    "start": "2019-08-24T09:00",
+    "end": "2019-08-24T10:00",
+    "type": "카테고리3",
+    "backgroundColor": "#4d638c",
+    "textColor": "#ffffff",
+    "allDay": false
+  },{
+    "_id": 9,
+    "title": "RTC 3일컷",
+    "description": "컷 컷 컷",
+    "start": "2019-09-23",
+    "end": "2019-09-25",
+    "type": "카테고리3",
+    "backgroundColor": "#495057",
+    "textColor": "#ffffff",
+    "allDay": true
+  },{
+    "_id": 10,
+    "title": "파이널 마무리",
+    "description": "파이널 마무리",
+    "start": "2019-10-15",
+    "end": "2019-10-22",
+    "type": "카테고리2",
+    "backgroundColor": "#9775fa",
+    "textColor": "#ffffff",
+    "allDay": true
+  }]

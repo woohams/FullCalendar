@@ -1,0 +1,35 @@
+
+1. pom.xml - ojdbc6.jar, mybatis, mybatis-spring, commons-dbcp, spring-orm
+2. web.xml - servlet-mapping : url-pattern, encodingFilter
+3. WEB-INF/spring/sqls/test.sql
+4. dto, dao(@Repository), biz(@Service)
+5. src/main/resources/sqls/mapper.xml
+6. WEB-INF/spring/sqls/config.xml	// 몰아놔도 상관은 없다.
+7. src/main/resources/properties/db.properties
+8. applicationContext.xml로 마이바티스 연결(db.properties)
+
+------------------------------------------------(AOP)
+
+9. pom.xml - org.aspectj/aspectjweaver, aspectjrt
+10. com.hellow.mvc.common.aop/LogAop.java
+11. aop-context.xml
+12. web.xml
+13. src/main/resources/log4j.xml (package 추가, root logger를 trace로 변경)
+
+-------------------------------------------------(filter)
+
+14. pon.xml - commons.lang3
+15. com.hellow.mvc.common.filter/LogFilter.java (impl javax.servlet.Filter)
+16. web.xml
+
+-------------------------------------------------(login)
+
+17. pom.xml - org.codehaus/jackson-core, jackson-mapper
+			- (spring 4.x 이상0 com.faster.xml.jackson/jackson-databind, jackson-core
+18. (index.jsp -> controller) login.jsp
+19. (ajax -> controller [@ResponseBody], biz, dao, mapper.xml)
+
+
+
+
+
