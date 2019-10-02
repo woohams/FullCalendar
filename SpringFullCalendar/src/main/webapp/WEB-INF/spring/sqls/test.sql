@@ -34,3 +34,6 @@ CREATE TABLE CALENDAR(
 INSERT INTO CALENDAR VALUES(CALENDAR_SEQ.NEXTVAL, 'admin', '카테고리1', '일정 제목', '일정 내용', '#D25565',SYSDATE, SYSDATE, 'false');
 
 SELECT * FROM CALENDAR;
+
+--------------------------------------------------------------------------------
+

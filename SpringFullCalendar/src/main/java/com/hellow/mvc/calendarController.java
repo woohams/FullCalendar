@@ -1,7 +1,6 @@
 package com.hellow.mvc;
 
-import java.util.HashMap;
-import java.util.Map;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,7 +20,7 @@ public class calendarController {
 	@RequestMapping(value = "/calendar.do", method = {RequestMethod.GET, RequestMethod.POST})
 	public String selectList(Model model) {
 		
-		model.addAttribute("calendarList", Calendarbiz.selectList());
+//		model.addAttribute("calendarList", Calendarbiz.selectList());
 		
 		return "calendar";
 	}
