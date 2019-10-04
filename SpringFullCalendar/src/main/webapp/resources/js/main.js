@@ -151,23 +151,44 @@ var calendar = $('#calendar').fullCalendar({
    * ************** */
   events: function (start, end, timezone, callback) {
     $.ajax({
-      type: "POST",
-      url: "./resources/data/data.json",
+      type: "GET",
+      url: "/calendar.do",
+      //"./resources/data/data.json",
+      dataType:"text",
       data: {
         // 실제 사용시, 날짜를 전달해 일정기간 데이터만 받아오기를 권장
       }, error: function(error){
         alert(error);
       },
-      success: function (response) {
-        console.log(response+"=>접속 성공!");
-        var fixedDate = response.map(function (array) {
-          if (array.allDay && array.start !== array.end) {
-            // 이틀 이상 AllDay 일정인 경우 달력에 표기시 하루를 더해야 정상출력
-            array.end = moment(array.end).add(1, 'days');
-          }
-          return array;
-        })
-        callback(fixedDate);
+      // success: function (response) {
+      //   console.log(response+"=>접속 성공!");
+      //   var fixedDate = response.map(function (array) {
+      //     if (array.allDay && array.start !== array.end) {
+      //       // 이틀 이상 AllDay 일정인 경우 달력에 표기시 하루를 더해야 정상출력
+      //       array.end = moment(array.end).add(1, 'days');
+      //     }
+      //     return array;
+      //   })
+      //   callback(fixedDate);
+
+        success:function(data) {
+	        	var parse = JSON.parse(data);
+	        	var events = [];
+	        	
+	        	$(parse).each(function() {
+	                events.push({
+	                  title: $(this).attr('calendar_title'),
+                    start: $(this).attr('calendar_start'),
+                    end: $(this).attr('calendar_end'),
+	                  url: "calendarSelectOne.do="+$(this).attr('url'),
+	                  description: $(this).attr('calendar_content')
+	                  // will be parsed
+	                  
+	                });
+	                
+	              });
+	        	
+	        	callback(events);
       }
     });
   },
