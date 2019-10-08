@@ -27,6 +27,38 @@ public class calendarController {
 	
 	@RequestMapping(value = "/calendar.do", method = {RequestMethod.GET, RequestMethod.POST})
 	public String selectList() {
+		
+		List<CalendarDto> list = Calendarbiz.selectList();
+		JSONArray jArr = new JSONArray();
+		HashMap<String, Object> map = null;
+		for(int i=0; i<list.size(); i++) {
+			map = new HashMap<String, Object>();
+//			map.put("id", list.get(i).getCalendar_seq());
+			map.put("title", list.get(i).getCalendar_title());
+			map.put("start", list.get(i).getCalendar_start());
+			map.put("end", list.get(i).getCalendar_end());
+//			map.put("description", list.get(i).getCalendar_content());
+//			map.put("url", list.get(i).getId());
+		
+			
+			jArr.add(map);
+			System.out.println(map);
+		}
+		
+		JSONObject jobj;
+		try {
+			jobj = new JSONObject();
+			jobj.put("event", jArr);
+			
+			JsonParser parser = new JsonParser();
+			JsonElement element = parser.parse(jobj.toString());
+			
+		} catch (JsonSyntaxException e) {
+			System.out.println("JSON 변환실패");
+			e.printStackTrace();
+		}
+
+		System.out.println(jArr.toString());
 		return "calendar";
 	}
 	
@@ -39,15 +71,16 @@ public class calendarController {
 		HashMap<String, Object> map = null;
 		for(int i=0; i<list.size(); i++) {
 			map = new HashMap<String, Object>();
-			map.put("id", list.get(i).getCalendar_seq());
+//			map.put("id", list.get(i).getCalendar_seq());
 			map.put("title", list.get(i).getCalendar_title());
 			map.put("start", list.get(i).getCalendar_start());
 			map.put("end", list.get(i).getCalendar_end());
-			map.put("description", list.get(i).getCalendar_content());
-			map.put("url", list.get(i).getId());
+//			map.put("description", list.get(i).getCalendar_content());
+//			map.put("url", list.get(i).getId());
 		
 			
 			jArr.add(map);
+			System.out.println(map);
 		}
 		
 		JSONObject jobj;
